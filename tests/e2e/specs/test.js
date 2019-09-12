@@ -1,6 +1,8 @@
 // For authoring Nightwatch tests, see
 // http://nightwatchjs.org/guide#usage
 
+/* eslint @typescript-eslint/explicit-function-return-type: 0 */
+
 module.exports = {
   "default e2e tests": browser => {
     browser
@@ -9,6 +11,6 @@ module.exports = {
       .assert.elementPresent(".hello")
       .assert.containsText("h1", "Welcome to Your Vue.js + TypeScript App")
       .assert.elementCount("img", 1)
-      .end();
+      .end()
   }
-};
+}

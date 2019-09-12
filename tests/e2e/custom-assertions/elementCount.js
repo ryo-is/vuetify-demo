@@ -7,13 +7,15 @@
 // For more information on custom assertions see:
 // http://nightwatchjs.org/guide#writing-custom-assertions
 
+/* eslint @typescript-eslint/explicit-function-return-type: 0 */
+
 exports.assertion = function elementCount(selector, count) {
-  this.message = `Testing if element <${selector}> has count: ${count}`;
-  this.expected = count;
-  this.pass = val => val === count;
-  this.value = res => res.value;
+  this.message = `Testing if element <${selector}> has count: ${count}`
+  this.expected = count
+  this.pass = val => val === count
+  this.value = res => res.value
   function evaluator(_selector) {
-    return document.querySelectorAll(_selector).length;
+    return document.querySelectorAll(_selector).length
   }
-  this.command = cb => this.api.execute(evaluator, [selector], cb);
-};
+  this.command = cb => this.api.execute(evaluator, [selector], cb)
+}
