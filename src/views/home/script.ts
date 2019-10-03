@@ -4,7 +4,8 @@ import { HomeComponentState } from "@/types"
 export default Vue.extend({
   data(): HomeComponentState {
     return {
-      text: "hoge"
+      text: "Hello Vue!!!",
+      dialog: true
     }
   },
   methods: {

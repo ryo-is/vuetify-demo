@@ -1,0 +1,29 @@
+<v-container class="mt-12">
+  <!-- <v-row justify="center">
+    <v-col cols=6>
+      <v-row
+        class="blue lighten-4" style="height: 450px;"
+        justify="center" align-content="center"
+      >
+        <v-col
+          v-for="n in 3" :key="n"
+          cols=12 sm=10 md=8 lg=4 xl=3
+        >
+          <v-card color="blue" outlined tile height=100></v-card>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row> -->
+  <v-btn large color="primary" @click="dialog=true">Open Modal</v-btn>
+  <v-dialog v-model="dialog" width=500>
+    <v-card>
+      <v-card-title>Modal Title</v-card-title>
+      <v-divider></v-divider>
+      <v-card-text>
+        <v-sheet class="pa-3">
+          <div class="body-1">Modal Text</div>
+        </v-sheet>
+      </v-card-text>
+    </v-card>
+  </v-dialog>
+</v-container>
