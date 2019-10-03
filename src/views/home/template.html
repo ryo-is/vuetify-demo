@@ -1,5 +1,5 @@
 <v-container class="mt-12">
-  <!-- <v-row justify="center">
+  <v-row justify="center">
     <v-col cols=6>
       <v-row
         class="blue lighten-4" style="height: 450px;"
@@ -13,7 +13,7 @@
         </v-col>
       </v-row>
     </v-col>
-  </v-row> -->
+  </v-row>
   <v-btn large color="primary" @click="dialog=true">Open Modal</v-btn>
   <v-dialog v-model="dialog" width=500>
     <v-card>
@@ -26,4 +26,17 @@
       </v-card-text>
     </v-card>
   </v-dialog>
+  <v-row class="mt-6" justify="center">
+    <v-data-table
+      :headers="tableHeaders" :items="tableItems"
+      :items-per-page=25
+      :footer-props="{itemsPerPageOptions: [25, 50, 100, -1]}"
+    ></v-data-table>
+  </v-row>
+  <v-row class="mt-6" justify="center">
+    <v-date-picker v-model="selectDate" color="green" locale="en"></v-date-picker>
+    <v-col cols=12>
+      <div>{{ selectDate }}</div>
+    </v-col>
+  </v-row>
 </v-container>
